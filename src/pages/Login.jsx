@@ -1,0 +1,98 @@
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
+import styles from "../styles/Senior-Styles/Login.module.css";
+
+function Login() {
+  const navigate = useNavigate();
+
+  function handleSkip() {
+    sessionStorage.setItem("Guest", "true");
+    navigate("/");
+  }
+
+  useEffect(() => {
+    const IsUser = sessionStorage.getItem("User");
+    if (IsUser) {
+      navigate("/");
+    }
+  }, [navigate]);
+
+  return (
+    <div className={styles.App}>
+      <form className="w-full flex flex-col items-start">
+        <div className="px-4 w-full flex justify-end">
+          <a
+            className={`${styles.FONT_SAIRA} text-[#1007FF] font-semibold cursor-pointer`}
+            onClick={handleSkip}
+          >
+            Skip
+          </a>
+        </div>
+        <div className="flex flex-col gap-3 mt-4">
+          <h2 className={`${styles.FONT_INTER} text-2xl`}>Welcome back!</h2>
+          <p className={`${styles.FONT_INTER} text-sm font-light`}>
+            We're glad to see you again. Let's get started!
+          </p>
+        </div>
+        <div className="w-full flex flex-col gap-4 py-2 mt-10">
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="USTA_PIN"
+              className={`${styles.LABELS} ${styles.FONT_INTER}`}
+            >
+              USTA PIN
+            </label>
+            <input
+              type="text"
+              className={styles.INPUTS}
+              required
+              id="USTA_PIN"
+              minLength={10}
+              maxLength={10}
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="Password"
+              className={`${styles.LABELS} ${styles.FONT_INTER}`}
+            >
+              Password
+            </label>
+            <input
+              type="text"
+              className={styles.INPUTS}
+              required
+              id="Password"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 mt-4">
+          <p className={`${styles.FONT_INTER} font-semibold cursor-pointer`}>
+            Forgot Password?
+          </p>
+          <button
+            className={`${styles.FONT_SAIRA} px-8 py-2 bg-black text-white rounded-sm text-md cursor-pointer`}
+          >
+            Login
+          </button>
+        </div>
+      </form>
+      <div className="w-full flex flex-row justify-between">
+        <Link to="/help">
+          <button className={`${styles.BUTTONS} ${styles.FONT_SAIRA}`}>
+            Need Help?
+          </button>
+        </Link>
+        <Link to="/credits">
+          <button className={`${styles.BUTTONS} ${styles.FONT_SAIRA}`}>
+            View Credits
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
