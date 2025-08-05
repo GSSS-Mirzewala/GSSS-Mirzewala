@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-import styles from "../styles/Senior-Styles/Login.module.css";
+import styles from "../styles/Login.module.css";
 
 function Login() {
   const navigate = useNavigate();

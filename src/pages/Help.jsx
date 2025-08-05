@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "../styles/Senior-Styles/Help.module.css";
+import styles from "../styles/Help.module.css";
 
 function Help() {
   const CardInfo = [

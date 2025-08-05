@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/Navbar.module.css";
 
+import { useAuth } from "../Storage/ProtectContext";
+
 import Home from "../assets/Icons/Home.svg";
 import Gallery from "../assets/Icons/Gallery.svg";
 import Dashboard from "../assets/Icons/Dashboard.svg";
@@ -8,7 +10,8 @@ import Notifications from "../assets/Icons/Notifications.svg";
 
 import Avatar from "../assets/public/Avatar.svg";
 
-function Navbar(props) {
+function Navbar() {
+  const { UserType } = useAuth();
   return (
     <nav className={styles.Navbar}>
       <div>
@@ -38,21 +41,22 @@ function Navbar(props) {
             <img src={Notifications} alt="Notifications" />
           </Link>
         </div>
-        <button
-          className={`${styles.Profile} flex items-center justify-center gap-2 border-1 rounded-full p-1 px-2 cursor-pointer`}
-          type="button"
-        >
-          <img
-            src={Avatar}
-            className={styles.Avatar}
-            alt="Avatar"
-            loading="lazy"
-          />
-          <span className="font-semibold text-md">
-            {props.UserType === "GUEST" && "Guest"}
-            {props.UserType === "USER" && "User"}
-          </span>
-        </button>
+        <Link to={UserType === "GUEST" ? "/login" : "/profile"}>
+          <button
+            className={`${styles.Profile} flex items-center justify-center gap-2 border-1 rounded-full p-1 px-2 cursor-pointer`}
+            type="button"
+          >
+            <img
+              src={Avatar}
+              className={styles.Avatar}
+              alt="Avatar"
+              loading="lazy"
+            />
+            <span className="font-semibold text-md">
+              {UserType === "GUEST" ? "Guest" : "User"}
+            </span>
+          </button>
+        </Link>
       </div>
     </nav>
   );

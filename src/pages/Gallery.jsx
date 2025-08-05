@@ -1,19 +1,19 @@
-import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
+import Carousel from "../components/sub-components/Carousel";
 
-function Home() {
+function Gallery() {
   return (
     <>
       <header>
         <Navbar />
       </header>
-      <main className="max-[648px]:pb-16">
-        <Hero />
+      <main>
+        <Carousel />
         <Navigation />
       </main>
     </>
   );
 }
 
-export default Home;
+export default Gallery;

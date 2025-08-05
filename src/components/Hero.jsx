@@ -2,7 +2,7 @@ import Intro from "./sub-components/Intro";
 import Quote from "./sub-components/Quote";
 import Question from "./sub-components/Question";
 
-function Hero(props) {
+function Hero() {
   const Information = [
     {
       TITLE: "What is G.S.S.S. Mirzewala?",

@@ -1,4 +1,4 @@
-import styles from "../../styles/Sub-Styles/Intro.module.css";
+import styles from "../../styles/Intro.module.css";
 
 function Intro() {
   return (
