@@ -1,3 +1,4 @@
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
 import Carousel from "../components/sub-components/Carousel";
@@ -9,8 +10,10 @@ function Gallery() {
         <Navbar />
       </header>
       <main>
-        <Carousel />
-        <Navigation />
+        <Hero>
+          <Carousel />
+          <Navigation />
+        </Hero>
       </main>
     </>
   );
