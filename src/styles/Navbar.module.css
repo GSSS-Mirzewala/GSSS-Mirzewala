@@ -1,0 +1,39 @@
+.Navbar {
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Icons {
+  width: 25px;
+  cursor: pointer;
+}
+
+.Avatar {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 648px) {
+  .Icons {
+    display: none;
+  }
+
+  .Profile {
+    border-radius: 30px;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .ProfileIcons {
+    display: none;
+  }
+
+  .Avatar {
+    display: block;
+  }
+}
