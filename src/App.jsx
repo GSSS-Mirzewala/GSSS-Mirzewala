@@ -1,22 +1,27 @@
+// Import Dependencies
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
+// Import Styles Sheets
 import "./App.css";
+
+// Import Components
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Help from "./pages/Help";
 import Gallery from "./pages/Gallery";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./Security/ProtectedRoute";
+
+// Context Block
 import { AuthProvider } from "./Storage/ProtectContext";
-import { PreferedLanguage } from "./Storage/PreferencesContext";
+import { BASIC_PREFERENCES_PROVIDER } from "./Storage/PreferencesContext";
 
 function App() {
-  const [lang, setLang] = useState("en");
-  const [UserType, SetUserType] = useState("STD");
+  const [UserType, SetUserType] = useState("TCH");
   return (
     <AuthProvider>
-      <PreferedLanguage.Provider value={lang}>
+      <BASIC_PREFERENCES_PROVIDER>
         <Routes>
           <Route
             path="/"
@@ -45,7 +50,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/help" element={<Help />} />
         </Routes>
-      </PreferedLanguage.Provider>
+      </BASIC_PREFERENCES_PROVIDER>
     </AuthProvider>
   );
 }

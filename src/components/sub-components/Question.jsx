@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { PreferedLanguage } from "../../Storage/PreferencesContext";
+import { BASIC_PREFERENCES } from "../../Storage/PreferencesContext";
 
 function Question(props) {
-  const useLanguage = useContext(PreferedLanguage);
+  const useLanguage = useContext(BASIC_PREFERENCES);
   return (
     <div className="rounded-[7px] bg-white p-4 flex items-start justify-start flex-col gap-1.5">
       <h2 className="text-[22px] font-medium" style={{ color: props.Color }}>
