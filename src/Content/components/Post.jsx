@@ -19,12 +19,6 @@ function Post({ MODAL_STATE, UPDATE_MODAL_STATE }) {
           onClick={handleModalState}
         ></input>
       </div>
-      <button
-        className="border-2 border-[#c0c0c0] rounded-md px-3 text-lg cursor-pointer shadow-md font-semibold"
-        onClick={handleModalState}
-      >
-        Post
-      </button>
     </div>
   );
 }

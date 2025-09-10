@@ -4,24 +4,36 @@ import Avatar from "../../assets/public/Avatar.svg";
 import Clock from "../../assets/Icons/Clock.svg";
 import Image from "../../assets/Icons/Image.svg";
 import Send from "../../assets/Icons/Send.svg";
+import Synchronize from "../../assets/Icons/Synchronize.svg";
 
 function PostModal({ UPDATE_MODAL_STATE }) {
+  // Who can see the Post?
+  const [CAN_VIEW, SET_CAN_VIEW] = useState("Who can see your Post?");
+
+  function handleViewChanger() {
+    if (CAN_VIEW === "Everyone") {
+      SET_CAN_VIEW("Staff");
+    } else if (CAN_VIEW === "Staff") {
+      SET_CAN_VIEW("Students");
+    } else if (CAN_VIEW === "Students") {
+      SET_CAN_VIEW("Non-Schoolies");
+    } else {
+      SET_CAN_VIEW("Everyone");
+    }
+  }
+
+  // Image Selector
   const fileInputRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
 
   // Handle file selection
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
+  function handleFileChange(e) {
+    const file = e.target.files[0];
     if (file) {
       const imageUrl = URL.createObjectURL(file);
       setSelectedImage(imageUrl);
     }
-  };
-
-  // Trigger hidden input when img is clicked
-  const handleImageClick = () => {
-    fileInputRef.current.click();
-  };
+  }
 
   return (
     <form className="bg-white min-w-[500px] max-md:min-w-[350px] max-w-[500px] max-md:max-w-[350px] rounded-[10px] shadow-lg">
@@ -71,15 +83,22 @@ function PostModal({ UPDATE_MODAL_STATE }) {
               width={20}
               alt="Add_Image"
               className="cursor-pointer mt-2"
-              onClick={handleImageClick}
+              onClick={() => {
+                fileInputRef.current.click();
+              }}
             />
           </div>
         </div>
       </div>
       <div className="p-3 flex items-center justify-between">
-        <a className="font-semibold text-[#c0c0c0] cursor-pointer">
-          Who can see your Post?
-        </a>
+        <button
+          type="button"
+          className="flex gap-2 font-semibold text-[#c0c0c0] cursor-pointer"
+          onClick={handleViewChanger}
+        >
+          {CAN_VIEW}
+          <img src={Synchronize} width={15} />
+        </button>
         <button
           type="submit"
           className="cursor-pointer px-3 w-fit rounded-sm font-semibold"
