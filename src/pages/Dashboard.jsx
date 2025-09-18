@@ -1,10 +1,13 @@
+import { useState } from "react";
+
 import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
 
 import Teacher from "../Content/Teacher";
 import Student from "../Content/Student";
 
-function Dashboard({ UserType }) {
+function Dashboard() {
+  const [UserType, SetUserType] = useState("TCH");
   return (
     <>
       <header>

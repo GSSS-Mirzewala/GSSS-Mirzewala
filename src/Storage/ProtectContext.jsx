@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
       setUserType("No Session Found");
 
       // Only redirect if NOT already on /login or /help
-      const publicRoutes = ["/login", "/help", "/credits"];
+      const publicRoutes = ["/login", "/help", "/credits", "/gallery"];
       if (!publicRoutes.includes(location.pathname)) {
         navigate("/login", { replace: true });
       }
