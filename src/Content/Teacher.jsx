@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Hero from "../components/Hero";
+
 import Post from "./components/Post";
 import PostModal from "./components/PostModal";
 
 function Teacher() {
   const [MODAL_STATE, UPDATE_MODAL_STATE] = useState("hidden");
-
   return (
     <Hero>
       <Post MODAL_STATE={MODAL_STATE} UPDATE_MODAL_STATE={UPDATE_MODAL_STATE} />

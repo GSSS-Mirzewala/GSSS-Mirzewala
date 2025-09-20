@@ -1,9 +1,10 @@
 import Hero from "../components/Hero";
+import Insights from "./components/Insights";
 
 function Student() {
   return (
     <Hero>
-      <h1>Hi Student!</h1>
+      <Insights />
     </Hero>
   );
 }

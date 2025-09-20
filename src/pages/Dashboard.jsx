@@ -7,13 +7,13 @@ import Teacher from "../Content/Teacher";
 import Student from "../Content/Student";
 
 function Dashboard() {
-  const [UserType, SetUserType] = useState("TCH");
+  const [UserType, SetUserType] = useState("STD");
   return (
     <>
       <header>
         <Navbar />
       </header>
-      <main>
+      <main className="max-sm:pb-16">
         {UserType === "TCH" && <Teacher />}
         {UserType === "STD" && <Student />}
         <Navigation />
