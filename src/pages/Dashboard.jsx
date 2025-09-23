@@ -7,7 +7,7 @@ import Teacher from "../Content/Teacher";
 import Student from "../Content/Student";
 
 function Dashboard() {
-  const [UserType, SetUserType] = useState("STD");
+  const [UserType, SetUserType] = useState("TCH");
   return (
     <>
       <header>

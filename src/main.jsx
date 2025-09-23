@@ -13,14 +13,18 @@ import Help from "./pages/Help";
 import Gallery from "./pages/Gallery";
 import Dashboard from "./pages/Dashboard";
 
+// Actions
+import { LoginAction } from "./pages/Login";
+import { HelpAction } from "./pages/Help";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/login", element: <Login /> },
-      { path: "/help", element: <Help /> },
+      { path: "/login", element: <Login />, action: LoginAction },
+      { path: "/help", element: <Help />, action: HelpAction },
       { path: "/gallery", element: <Gallery /> },
       { path: "/dashboard", element: <Dashboard /> },
     ],

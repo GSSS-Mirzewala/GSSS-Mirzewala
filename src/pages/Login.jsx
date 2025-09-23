@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -21,7 +21,7 @@ function Login() {
 
   return (
     <div className={styles.App}>
-      <form className="w-full flex flex-col items-start">
+      <Form method="POST" className="w-full flex flex-col items-start">
         <div className="px-4 w-full flex justify-end">
           <a
             className={`${styles.FONT_SAIRA} text-[#1007FF] font-semibold cursor-pointer`}
@@ -49,8 +49,9 @@ function Login() {
               className={styles.INPUTS}
               required
               id="USTA_PIN"
-              minLength={10}
-              maxLength={10}
+              name="USTA_PIN"
+              minLength={11}
+              maxLength={11}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -61,10 +62,11 @@ function Login() {
               Password
             </label>
             <input
-              type="text"
+              type="password"
               className={styles.INPUTS}
               required
               id="Password"
+              name="Password"
             />
           </div>
         </div>
@@ -78,7 +80,7 @@ function Login() {
             Login
           </button>
         </div>
-      </form>
+      </Form>
       <div className="w-full flex flex-row justify-between">
         <Link to="/help">
           <button className={`${styles.BUTTONS} ${styles.FONT_SAIRA}`}>
@@ -93,6 +95,10 @@ function Login() {
       </div>
     </div>
   );
+}
+
+export function LoginAction() {
+  console.log("Logging... in");
 }
 
 export default Login;

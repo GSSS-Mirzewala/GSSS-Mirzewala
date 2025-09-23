@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { BASIC_PREFERENCES } from "../../Storage/PreferencesContext";
 
 import styles from "../styles/Insights.module.css";
-import DateComponent from "./Date";
 
 function Insights() {
   const useLanguage = useContext(BASIC_PREFERENCES);
@@ -51,7 +50,7 @@ function Insights() {
     },
     {
       DATE: 7,
-      STATUS: "LEAVE",
+      STATUS: "PRESENT",
     },
   ];
 
@@ -61,10 +60,8 @@ function Insights() {
       color = "#007736";
     } else if (STATUS === "ABSENT") {
       color = "#f71919";
-    } else if (STATUS === "LEAVE") {
-      color = "#FFA109";
     } else if (STATUS === "HOLIDAY") {
-      color = "#FF6900";
+      color = "#FFA109";
     } else {
       color = "#000";
     }
@@ -81,7 +78,15 @@ function Insights() {
         {DATES.map((DATE) => {
           let COLOR = getColor(DATE.STATUS);
           return (
-            <DateComponent date={DATE.DATE} color={COLOR} key={DATE.DATE} />
+            // Date
+            <div
+              className={`flex items-center justify-center bg-[${COLOR}] min-w-12 min-h-12 rounded-sm shadow-md shadow-neutral-950`}
+              key={DATE.DATE}
+            >
+              <span className="text-white text-xl font-semibold">
+                {DATE.DATE}
+              </span>
+            </div>
           );
         })}
       </div>
@@ -102,13 +107,6 @@ function Insights() {
         </div>
         <div className={styles.CirclesContainer}>
           <div className={`${styles.Circles} bg-[#FFA109]`}></div>
-          <span className="font-semibold">
-            &nbsp; <strong>= </strong>
-            {useLanguage === "hi" ? "व्यक्तिगत अवकाश" : "Leave"}
-          </span>
-        </div>
-        <div className={styles.CirclesContainer}>
-          <div className={`${styles.Circles} bg-[#FF6900]`}></div>
           <span className="font-semibold">
             &nbsp; <strong>= </strong>
             {useLanguage === "hi" ? "अवकाश" : "Holiday"}

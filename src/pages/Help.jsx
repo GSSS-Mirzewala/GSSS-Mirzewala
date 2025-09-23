@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 import styles from "../styles/Help.module.css";
 
 function Help() {
@@ -45,30 +45,37 @@ function Help() {
         </p>
       </div>
       <div className="mt-10">
-        <form action="" className={styles.FORM}>
+        <Form method="POST" className={styles.FORM}>
           <div className="flex flex-col gap-2">
-            <label htmlFor="" className={styles.LABELS}>
+            <label htmlFor="emailInput" className={styles.LABELS}>
               Email
             </label>
             <input
-              type="text"
+              id="emailInput"
+              type="email"
+              name="email"
+              autoComplete="email"
               className={`w-[95%] max-sm:w-full ${styles.INPUTS}`}
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="" className={styles.LABELS}>
+            <label htmlFor="concernInput" className={styles.LABELS}>
               Your Concern
             </label>
             <textarea
-              name=""
-              id=""
+              id="concernInput"
+              name="concern"
+              autoComplete="off"
               className={`w-[95%] max-sm:w-full min-h-32 max-h-60 ${styles.INPUTS}`}
             ></textarea>
           </div>
-          <button className="bg-black text-white w-fit px-6 py-2 rounded-sm cursor-pointer font-semibold">
+          <button
+            type="submit"
+            className="bg-black text-white w-fit px-6 py-2 rounded-sm cursor-pointer font-semibold"
+          >
             Submit
           </button>
-        </form>
+        </Form>
       </div>
       <div className="mt-10">
         <h1 className="text-3xl text-center">FAQs</h1>
@@ -89,6 +96,10 @@ function Help() {
       </div>
     </div>
   );
+}
+
+export function HelpAction() {
+  console.log("Submitting...");
 }
 
 export default Help;

@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Form } from "react-router-dom";
 
 import Avatar from "../../assets/public/Avatar.svg";
 import Clock from "../../assets/Icons/Clock.svg";
@@ -14,8 +15,8 @@ function PostModal({ UPDATE_MODAL_STATE }) {
     if (CAN_VIEW === "Everyone") {
       SET_CAN_VIEW("Staff");
     } else if (CAN_VIEW === "Staff") {
-      SET_CAN_VIEW("Students");
-    } else if (CAN_VIEW === "Students") {
+      SET_CAN_VIEW("Schoolies");
+    } else if (CAN_VIEW === "Schoolies") {
       SET_CAN_VIEW("Non-Schoolies");
     } else {
       SET_CAN_VIEW("Everyone");
@@ -36,7 +37,10 @@ function PostModal({ UPDATE_MODAL_STATE }) {
   }
 
   return (
-    <form className="bg-white min-w-[500px] max-md:min-w-[350px] max-w-[500px] max-md:max-w-[350px] rounded-[10px] shadow-lg">
+    <Form
+      method="POST"
+      className="bg-white min-w-[500px] max-md:min-w-[350px] max-w-[500px] max-md:max-w-[350px] rounded-[10px] shadow-lg"
+    >
       <div className="flex items-center justify-between py-3 px-4">
         <button
           type="button"
@@ -55,6 +59,9 @@ function PostModal({ UPDATE_MODAL_STATE }) {
           <a className="font-semibold">Michael</a>
           <div>
             <textarea
+              id="content"
+              name="content"
+              autoComplete="off"
               placeholder="What's new?"
               required
               className="w-full min-h-30 max-md:min-h-10 max-h-50 outline-none font-semibold text-[#c0c0c0] resize-none"
@@ -77,7 +84,7 @@ function PostModal({ UPDATE_MODAL_STATE }) {
               style={{ display: "none" }}
               onChange={handleFileChange}
             />
-            {/* Clickable image (to trigger file select) */}
+            {/* Gallery Icon - Triggers file Selector */}
             <img
               src={Image}
               width={20}
@@ -106,7 +113,7 @@ function PostModal({ UPDATE_MODAL_STATE }) {
           <img src={Send} alt="Send" />
         </button>
       </div>
-    </form>
+    </Form>
   );
 }
 
