@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 
 import Post from "./components/Post";
 import PostModal from "./components/PostModal";
+import Tools from "./components/Tools";
 
 function Teacher() {
   const [MODAL_STATE, UPDATE_MODAL_STATE] = useState("hidden");
@@ -17,6 +18,7 @@ function Teacher() {
           </div>
         </>
       )}
+      <Tools />
     </Hero>
   );
 }

@@ -1,0 +1,45 @@
+.CONTAINER {
+  border: 2px solid #c0c0c0;
+  padding: 0.75rem;
+  min-width: 300px;
+  max-width: 300px;
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 648px) {
+  .CONTAINER {
+    max-width: 350px;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+.CONTAINER:hover {
+  border-color: #40a269;
+}
+
+.CIRCLE {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+.BUTTON {
+  background: #000;
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
