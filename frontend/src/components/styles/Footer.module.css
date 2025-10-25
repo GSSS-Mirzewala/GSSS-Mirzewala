@@ -1,0 +1,14 @@
+.Links {
+  font-weight: 600;
+  color: #c0c0c0;
+  transition: color 0.3s ease-in-out;
+}
+
+.Links:hover {
+  color: royalblue;
+}
+
+.Icons {
+  width: 25px;
+  cursor: pointer;
+}
