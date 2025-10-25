@@ -118,6 +118,8 @@ function Login() {
   );
 }
 
+export default Login;
+
 // Submit Action
 export async function LoginAction({ request }) {
   const formData = await request.formData(); // Getting FormData object
@@ -136,5 +138,3 @@ export async function LoginAction({ request }) {
   const CREDENTIALS_JSON = JSON.stringify(Credentials);
   console.log("JSON Credentials:", CREDENTIALS_JSON);
 }
-
-export default Login;

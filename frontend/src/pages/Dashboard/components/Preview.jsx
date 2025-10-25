@@ -57,3 +57,24 @@ function Preview({ UPDATE_PREVIEW_STATE }) {
 }
 
 export default Preview;
+
+// Submit Action
+export async function PreviewAction({ request }) {
+  const store = useSelector((store) => store.ATM_SHEET);
+
+  console.log(store);
+
+  // Sanitizing Data
+  const USTA_PIN = useBSF(formData.get("USTA_PIN"));
+  const Password = useBSF(formData.get("Password"));
+
+  // Creating Credentials Object
+  const Credentials = {
+    USTA_PIN: USTA_PIN,
+    Password: Password,
+  };
+
+  // Converting Credentials into JSON Format
+  const CREDENTIALS_JSON = JSON.stringify(Credentials);
+  console.log("JSON Credentials:", CREDENTIALS_JSON);
+}

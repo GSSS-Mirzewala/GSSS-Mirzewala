@@ -46,13 +46,6 @@ function ATM() {
     {
       Avatar: Avatar,
       ID: 2,
-      Name: "Gurman Singh",
-      Father: "Sandeep Singh",
-      marked: false,
-    },
-    {
-      Avatar: Avatar,
-      ID: 3,
       Name: "Sahil",
       Father: "Santosh Kumar",
       marked: false,

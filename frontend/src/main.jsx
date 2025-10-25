@@ -14,25 +14,25 @@ import Minimalist from "./Layouts/Minimalist.jsx";
 import Classic from "./Layouts/Classic.jsx";
 
 // Pages
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
-import Help from "./pages/Help/Help";
-import About from "./pages/About/About";
-import Gallery from "./pages/Gallery/Gallery";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import Notifications from "./pages/Notifications/Notifications";
+import Home from "@page/Home/Home";
+import Login from "@page/Login/Login";
+import Help from "@page/Help/Help";
+import About from "@page/About/About";
+import Gallery from "@page/Gallery/Gallery";
+import Dashboard from "@page/Dashboard/Dashboard";
+import Notifications from "@page/Notifications/Notifications";
 
 // About Sections
-import Introduction from "./pages/About/components/Introduction.jsx";
-import ReleaseNotes from "./pages/About/components/ReleaseNotes.jsx";
-import Credits from "./pages/About/components/Credits.jsx";
+import Introduction from "@page/About/components/Introduction.jsx";
+import ReleaseNotes from "@page/About/components/ReleaseNotes.jsx";
+import Credits from "@page/About/components/Credits.jsx";
 
 // Dashboard Sections
-import ATM from "./pages/Dashboard/components/ATM.jsx";
+import ATM from "@page/Dashboard/components/ATM.jsx";
 
 // Actions
-import { LoginAction } from "./pages/Login/Login";
-import { HelpAction } from "./pages/Help/Help";
+import { LoginAction } from "@page/Login/Login";
+import { HelpAction } from "@page/Help/Help";
 
 const router = createBrowserRouter([
   {
