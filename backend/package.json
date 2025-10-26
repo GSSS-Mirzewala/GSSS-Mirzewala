@@ -4,7 +4,7 @@
   "description": "Backend for G.S.S.S. Mirzewala's Website",
   "license": "ISC",
   "author": "Devvv Piyush",
-  "type": "module",
+  "type": "commonjs",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./app.js"
