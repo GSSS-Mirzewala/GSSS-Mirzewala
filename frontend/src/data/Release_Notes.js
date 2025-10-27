@@ -2,7 +2,7 @@ const RELEASE_NOTES = [
   {
     ID: 0,
     DATE: "05 Oct. 2025",
-    NOTIFY_TILL: "20251012", // YYYYMMDD
+    NOTIFY_TILL: "20251105", // YYYYMMDD
     UPDATE_TYPE: "Cumulative Update", // Can be Patch, Security, Minor or Commulative (Major) Update
     VERSION: "v2.0.0",
     CONTENT:
