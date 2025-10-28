@@ -13,7 +13,6 @@ function Preview({ UPDATE_PREVIEW_STATE }) {
   JSON.parse(JSON.stringify(store)).map((entries) => {
     STD_LIST.push(entries);
   });
-  console.log(STD_LIST);
   return (
     <Form className="bg-white min-w-[90vw] max-w-[90vh] max-md:max-w-[350px] rounded-[10px] shadow-lg">
       <div className="flex items-center justify-between py-3 px-4">

@@ -4,11 +4,18 @@ import ToolCard from "./ToolCard";
 function Tools() {
   const Tools = [
     {
-      Name: "ATTENDENCE MARKER",
+      Name: "Attendence Marker",
       Description:
-        "Attendance Marker is a dedicated tool for teachers to quickly record student attendance. It allows marking each student as either Present or Absent, ensuring accurate daily records and easy tracking for the school.",
+        "The ATM (Attendance Marker) by G.S.S.S. Mirzewala is a digital tool that allows teachers to quickly mark and manage student attendance online, ensuring accuracy, ease of use, and efficient record keeping.",
       Icon: "../src/assets/Icons/Check.svg",
-      Route: "/dashboard/attendence",
+      Route: "/dashboard/tools/atm",
+    },
+    {
+      Name: "Roll Number Allocator",
+      Description:
+        "The RNA (Roll Number Allocator) is a digital tool by G.S.S.S. Mirzewala that automatically assigns unique roll numbers to students by class and section, ensuring accuracy, consistency, and saving teachers’ time.",
+      Icon: "../src/assets/Icons/Graduation_Cap.svg",
+      Route: "/dashboard/tools/rna",
     },
   ];
   return (

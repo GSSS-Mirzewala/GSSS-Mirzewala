@@ -10,7 +10,7 @@ function Menu({ SELECTED }) {
     <div className="w-full bg-white rounded-sm p-6">
       <div className="flex flex-row items-center gap-8">
         <Link
-          to="/about/"
+          to="/about"
           className={`font-semibold text-base cursor-pointer ${
             SELECTED === "Introduction" ? "text-[var(--primary)]" : "text-black"
           }`}
@@ -18,7 +18,7 @@ function Menu({ SELECTED }) {
           {LANGUAGE === "hi" ? "परिचय" : "Introduction"}
         </Link>
         <Link
-          to="release_notes"
+          to="/release_notes"
           className={`font-semibold text-base cursor-pointer ${
             SELECTED === "Release Notes"
               ? "text-[var(--primary)]"
@@ -28,7 +28,7 @@ function Menu({ SELECTED }) {
           {LANGUAGE === "hi" ? "संस्करण विवरण" : "Release Notes"}
         </Link>
         <Link
-          to="credits"
+          to="/credits"
           className={`font-semibold text-base cursor-pointer ${
             SELECTED === "Credits" ? "text-[var(--primary)]" : "text-black"
           }`}
