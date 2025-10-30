@@ -29,7 +29,7 @@ function NewUpdate({ SET_NOTIFY }) {
               New {NOTIFICATION_INFO.UPDATE_TYPE} ({NOTIFICATION_INFO.VERSION}){" "}
             </span>
             — Rolled out on {NOTIFICATION_INFO.DATE}.{" "}
-            <Link to="/about/release_notes" className="text-blue-600">
+            <Link to="/release_notes" className="text-blue-600">
               [View Release Notes]
             </Link>
           </span>

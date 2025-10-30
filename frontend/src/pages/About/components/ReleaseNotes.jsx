@@ -2,7 +2,7 @@
 import RELEASE_NOTES from "@/data/Release_Notes";
 
 // Local Hooks
-import { usePreference } from "@/hooks/ContextHooks";
+import { usePreference } from "@hooks/ContextHooks";
 
 function ReleaseNotes() {
   const { LANGUAGE } = usePreference();

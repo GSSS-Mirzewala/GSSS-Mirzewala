@@ -1,4 +1,4 @@
-import { usePreference } from "@/hooks/ContextHooks";
+import { usePreference } from "@hooks/ContextHooks";
 
 function Question(props) {
   const { LANGUAGE } = usePreference();

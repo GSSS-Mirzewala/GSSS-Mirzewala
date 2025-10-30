@@ -1,5 +1,5 @@
 // Local Hooks
-import { usePreference, useCalendar } from "@/hooks/ContextHooks";
+import { usePreference, useCalendar } from "@hooks/ContextHooks";
 
 // Styles
 import styles from "./styles/Insights.module.css";

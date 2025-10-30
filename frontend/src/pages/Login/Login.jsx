@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Local Hooks
-import { useBSF } from "@/hooks/SecuityHooks";
+import { useBSF } from "@hooks/SecuityHooks";
 
 // Icons
 import Open_Eye from "@icons/Open_Eye.svg";

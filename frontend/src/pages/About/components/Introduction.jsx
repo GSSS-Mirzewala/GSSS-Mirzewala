@@ -1,5 +1,5 @@
 // Local Hooks
-import { usePreference } from "@/hooks/ContextHooks";
+import { usePreference } from "@hooks/ContextHooks";
 
 function Introduction() {
   const { LANGUAGE } = usePreference();

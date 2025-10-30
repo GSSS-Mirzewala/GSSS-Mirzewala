@@ -15,9 +15,9 @@ function RootProvider({ children }) {
     <ReduxProvider store={STORE}>
       <AuthProvider>
         <PrefProvider>
-          <HolidayProvider>
-            <CalProvider>{children}</CalProvider>
-          </HolidayProvider>
+          <CalProvider>
+            <HolidayProvider>{children}</HolidayProvider>
+          </CalProvider>
         </PrefProvider>
       </AuthProvider>
     </ReduxProvider>

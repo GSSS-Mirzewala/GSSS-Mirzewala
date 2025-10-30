@@ -19,7 +19,7 @@ function Tools() {
     },
   ];
   return (
-    <div className="w-full bg-white p-8 rounded-sm flex flex-row items-center justify-between max-sm:justify-center overflow-x-auto gap-8 scroll-smooth">
+    <div className="w-full bg-white p-8 rounded-sm flex flex-row items-center justify-between overflow-x-auto gap-8 scroll-smooth">
       {Tools.map((Tool) => {
         return (
           <ToolCard

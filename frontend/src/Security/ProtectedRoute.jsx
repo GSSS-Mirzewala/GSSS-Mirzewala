@@ -1,5 +1,5 @@
 // Local Hooks
-import { useAuth } from "@/hooks/ContextHooks";
+import { useAuth } from "@hooks/ContextHooks";
 
 export default function ProtectedRoute({ children }) {
   const { UserType } = useAuth();

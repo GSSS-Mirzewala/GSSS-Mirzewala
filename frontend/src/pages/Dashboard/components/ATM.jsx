@@ -1,5 +1,5 @@
 // React Hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
 // Local Hooks
@@ -71,6 +71,26 @@ function ATM() {
     },
   ]);
 
+  const [MESSAGE, SET_MESSAGE] = useState();
+  const Messages = [
+    "😎 Relax teacher ji! even the attendence Register is sleeping Today.",
+    "☕ Take a break! Attendance is also sipping chai today.",
+    "🏖️ It’s a holiday! If you try marking attendance, even the system will say ‘chill karo’ 😌",
+    "📚 School closed, attendance closed, stress also closed. Enjoy!",
+    "📵 No attendance today. System on Do Not Disturb mode.",
+    "😴 Even our servers are snoring today. Enjoy the holiday!",
+    "☕ Attendance ni lagni aaj! System v cha peen baitha ae 😂",
+  ];
+
+  function GetNotificationMessage() {
+    const RandomNumber = Math.floor(Math.random() * Messages.length);
+    return Messages[RandomNumber];
+  }
+
+  useEffect(() => {
+    SET_MESSAGE(GetNotificationMessage());
+  }, []);
+
   // Preview
   function handlePreview() {
     if (PREVIEW_STATE === "hidden") {
@@ -83,7 +103,7 @@ function ATM() {
   return (
     <>
       {isHoliday === true ? (
-        <Message Message={"It's a Holiday"} Graphic={Holiday_Light} />
+        <Message MESSAGE={MESSAGE} Graphic={Holiday_Light} />
       ) : (
         <div className="bg-white rounded-md border-2 border-gray-700">
           <div className="flex items-center justify-between py-3 px-4 max-sm:px-2">

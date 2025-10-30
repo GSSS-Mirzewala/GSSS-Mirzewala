@@ -1,5 +1,5 @@
 // Local Hooks
-import { useCalendar } from "@/hooks/ContextHooks";
+import { useCalendar } from "@hooks/ContextHooks";
 
 // Local Components
 import ATM_Status from "./ATMStatus";

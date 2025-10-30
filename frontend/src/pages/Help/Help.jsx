@@ -2,7 +2,7 @@
 import { Form, Link } from "react-router-dom";
 
 // Local Hooks
-import { useBRTSF } from "@/hooks/SecuityHooks";
+import { useBRTSF } from "@hooks/SecuityHooks";
 
 // Styles
 import styles from "./Help.module.css";

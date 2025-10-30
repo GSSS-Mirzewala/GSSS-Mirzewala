@@ -41,7 +41,7 @@ function Notifications() {
   return (
     <>
       {Notifications.length === 0 ? (
-        <Message Message={MESSAGE} Graphic={Empty_Notification_Light} />
+        <Message MESSAGE={MESSAGE} Graphic={Empty_Notification_Light} />
       ) : null}
     </>
   );

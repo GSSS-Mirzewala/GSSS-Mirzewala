@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Local Hooks
-import { usePreference } from "@/hooks/ContextHooks";
+import { usePreference } from "@hooks/ContextHooks";
 
 function Menu({ SELECTED }) {
   const { LANGUAGE } = usePreference();
