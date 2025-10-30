@@ -1,0 +1,16 @@
+body {
+  background-color: #f1f2f4;
+}
+
+main {
+  min-height: 65vh;
+}
+
+@media (max-width: 648px) {
+  main {
+    min-height: 60vh;
+  }
+  footer {
+    padding-bottom: 4rem;
+  }
+}
