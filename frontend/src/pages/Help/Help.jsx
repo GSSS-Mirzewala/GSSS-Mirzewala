@@ -10,6 +10,9 @@ import styles from "./Help.module.css";
 // Data
 import CardInfo from "@/data/HelpCards";
 
+// UI/UX Components
+import Button_Dark from "@ui/Button_Dark";
+
 function Help() {
   return (
     <div className={styles.App}>
@@ -54,12 +57,7 @@ function Help() {
               maxLength={10000}
             ></textarea>
           </div>
-          <button
-            type="submit"
-            className="bg-black text-white w-fit px-6 py-2 rounded-sm cursor-pointer font-semibold"
-          >
-            Submit
-          </button>
+          <Button_Dark text="Submit" px="1.5" py="0.5" />
         </Form>
       </div>
       <div className="mt-10">

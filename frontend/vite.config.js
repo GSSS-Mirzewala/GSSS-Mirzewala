@@ -14,6 +14,7 @@ export default defineConfig({
       "@hooks": path.resolve(__dirname, "./src/hooks"),
       "@page": path.resolve(__dirname, "./src/pages"),
       "@styles": path.resolve(__dirname, "./src/styles"),
+      "@ui": path.resolve(__dirname, "./src/components/UI"),
     },
   },
 });

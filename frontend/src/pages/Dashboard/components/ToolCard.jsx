@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // Styles
 import styles from "./styles/ToolCard.module.css";
+import Button from "../UI/Button";
 
 function ToolCard({ Name, Description, Icon, Route }) {
   const navigate = useNavigate();
@@ -20,14 +21,7 @@ function ToolCard({ Name, Description, Icon, Route }) {
         </div>
       </div>
       <div className="flex items-center justify-center py-3">
-        <button
-          className={styles.BUTTON}
-          onClick={() => {
-            navigate(Route);
-          }}
-        >
-          Next
-        </button>
+        <Button />
       </div>
     </div>
   );

@@ -1,6 +1,9 @@
 // React Router (Components)
 import { Form, Link } from "react-router-dom";
 
+// UI/UX Components
+import Button_Dark from "@ui/Button_Dark";
+
 // React Hooks
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -58,24 +61,21 @@ function Login() {
       <Form method="POST" className="w-full flex flex-col items-start">
         <div className="px-4 w-full flex justify-end">
           <a
-            className={`${styles.FONT_SAIRA} text-[#1007FF] font-semibold cursor-pointer`}
+            className={`FONT_SAIRA text-[#1007FF] font-semibold cursor-pointer`}
             onClick={handleSkip}
           >
             Skip
           </a>
         </div>
         <div className="flex flex-col gap-3 mt-4">
-          <h2 className={`${styles.FONT_INTER} text-2xl`}>Welcome back!</h2>
-          <p className={`${styles.FONT_INTER} text-sm font-light`}>
+          <h2 className={`FONT_INTER text-2xl`}>Welcome back!</h2>
+          <p className={`FONT_INTER text-sm font-light`}>
             We're glad to see you again. Let's get started!
           </p>
         </div>
         <div className="w-full flex flex-col gap-4 py-2 mt-10">
           <div className="w-[95%] flex flex-col gap-2">
-            <label
-              htmlFor="USTA_PIN"
-              className={`${styles.LABELS} ${styles.FONT_INTER}`}
-            >
+            <label htmlFor="USTA_PIN" className={`${styles.LABELS} FONT_INTER`}>
               USTA PIN
             </label>
             <div className="w-[100%] flex flex-row items-center gap-2 pr-2 border-2 border-[#c0c0c0] rounded-sm shadow-sm hover:border-blue-600 transition-colors ease-in-out duration-300">
@@ -93,10 +93,7 @@ function Login() {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <label
-              htmlFor="Password"
-              className={`${styles.LABELS} ${styles.FONT_INTER}`}
-            >
+            <label htmlFor="Password" className={`${styles.LABELS} FONT_INTER`}>
               Password
             </label>
             <div className="w-[95%] flex flex-row items-center gap-2 pr-3 border-2 border-[#c0c0c0] rounded-sm shadow-sm hover:border-blue-600 transition-colors ease-in-out duration-300">
@@ -133,14 +130,10 @@ function Login() {
           </div>
         </div>
         <div className="flex flex-col gap-4 mt-4">
-          <p className={`${styles.FONT_INTER} font-semibold cursor-pointer`}>
+          <p className={`FONT_INTER font-semibold cursor-pointer`}>
             Forgot Password?
           </p>
-          <button
-            className={`${styles.FONT_SAIRA} px-8 py-2 bg-black text-white rounded-sm text-md cursor-pointer`}
-          >
-            Login
-          </button>
+          <Button_Dark text="Login" font="FONT_SAIRA" px="3" py="0.5" />
         </div>
       </Form>
       <div className="w-full flex flex-row justify-between">

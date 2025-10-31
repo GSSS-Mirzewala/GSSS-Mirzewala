@@ -31,14 +31,6 @@
   cursor: pointer;
 }
 
-.FONT_SAIRA {
-  font-family: "Saira", sans-serif;
-}
-
-.FONT_INTER {
-  font-family: "Inter", sans-serif;
-}
-
 @media (max-width: 648px) {
   .BUTTONS {
     background: #000;

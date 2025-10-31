@@ -23,7 +23,8 @@ import Dashboard from "@page/Dashboard/Dashboard";
 import Notifications from "@page/Notifications/Notifications";
 
 // Dashboard Sections
-import ATM from "@page/Dashboard/components/ATM.jsx";
+import ATM from "@page/Dashboard/tools/ATM.jsx";
+import RNA from "@page/Dashboard/tools/RNA.jsx";
 
 // Actions
 import { LoginAction } from "@page/Login/Login";
@@ -45,6 +46,7 @@ const router = createBrowserRouter([
           { path: "/dashboard", element: <Dashboard /> },
           { path: "/notifications", element: <Notifications /> },
           { path: "/dashboard/tools/atm", element: <ATM /> },
+          { path: "/dashboard/tools/rna", element: <RNA /> },
         ],
       },
       {
